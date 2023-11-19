@@ -46,6 +46,8 @@ public class CalculatorListener implements ActionListener {
 			cv.cm.setAns(0);
 			cv.cm.setNum1(0);
 			cv.cm.setNum2(0);
+			cv.textField.setText(null);
+			cv.textField_1.setText(null);
 		} else if (action.equals("On")) {
 			cv.btnNewButton_1.setEnabled(true);
 			cv.btnNewButton_2.setEnabled(true);
@@ -94,6 +96,7 @@ public class CalculatorListener implements ActionListener {
 			System.exit(0);
 		} else if (action.equals("AC")) {
 			cv.textField.setText(null);
+			cv.textField_1.setText(null);
 		} else if (action.equals("DEL")) {
 			cv.delNum();
 		} else if (action.equals("1")) {
