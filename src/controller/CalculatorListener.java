@@ -42,6 +42,10 @@ public class CalculatorListener implements ActionListener {
 			cv.btnNewButton_mu.setEnabled(false);
 			cv.btnNewButton_delete.setEnabled(false);
 			cv.btnNewButton_ac.setEnabled(false);
+			cv.re = null;
+			cv.cm.setAns(0);
+			cv.cm.setNum1(0);
+			cv.cm.setNum2(0);
 		} else if (action.equals("On")) {
 			cv.btnNewButton_1.setEnabled(true);
 			cv.btnNewButton_2.setEnabled(true);
@@ -86,9 +90,52 @@ public class CalculatorListener implements ActionListener {
 			cv.rdbtnNewRadioButton_dark.setForeground(Color.BLACK);
 			cv.rdbtnNewRadioButton_off.setForeground(Color.BLACK);
 			cv.rdbtnNewRadioButton_light.setForeground(Color.BLACK);
-		} else if(action.equals("Exit")){
+		} else if (action.equals("Exit")) {
 			System.exit(0);
+		} else if (action.equals("AC")) {
+			cv.textField.setText(null);
+		} else if (action.equals("DEL")) {
+			cv.delNum();
+		} else if (action.equals("1")) {
+			cv.setTextNum1();
+		} else if (action.equals("2")) {
+			cv.setTextNum2();
+		} else if (action.equals("3")) {
+			cv.setTextNum3();
+		} else if (action.equals("4")) {
+			cv.setTextNum4();
+		} else if (action.equals("5")) {
+			cv.setTextNum5();
+		} else if (action.equals("6")) {
+			cv.setTextNum6();
+		} else if (action.equals("7")) {
+			cv.setTextNum7();
+		} else if (action.equals("8")) {
+			cv.setTextNum8();
+		} else if (action.equals("9")) {
+			cv.setTextNum9();
+		} else if (action.equals("0")) {
+			cv.setTextNum0();
+		} else if (action.equals("+")) {
+			cv.setNum1cong();
+		} else if (action.equals("-")) {
+			cv.setNum1tru();
+		} else if (action.equals("*")) {
+			cv.setNum1nhan();
+		} else if (action.equals("/")) {
+			cv.setNum1chia();
+		} else if (action.equals("=")) {
+			cv.setNum2andresult();
+		} else if (action.equals("√")) {
+			cv.setResultCanBac2();
+		}else if (action.equals("^")) {
+			cv.setNum1mu();
+		}else if (action.equals("Sin")) {
+			cv.setMethodSin();
+		}else if (action.equals("Cos")) {
+			cv.setMethodCos();
+		}else if (action.equals("Tan")) {
+			cv.setMethodTan();
 		}
 	}
-
 }
