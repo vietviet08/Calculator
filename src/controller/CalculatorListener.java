@@ -97,8 +97,13 @@ public class CalculatorListener implements ActionListener {
 		} else if (action.equals("AC")) {
 			cv.textField.setText(null);
 			cv.textField_1.setText(null);
+			cv.cm.setNum1(0);
+			cv.cm.setNum2(0);
+			cv.re = "AC";
 		} else if (action.equals("DEL")) {
 			cv.delNum();
+		} else if (action.equals(".")) {
+			cv.setTextDot();
 		} else if (action.equals("1")) {
 			cv.setTextNum1();
 		} else if (action.equals("2")) {
@@ -131,14 +136,16 @@ public class CalculatorListener implements ActionListener {
 			cv.setNum2andresult();
 		} else if (action.equals("√")) {
 			cv.setResultCanBac2();
-		}else if (action.equals("^")) {
+		} else if (action.equals("^")) {
 			cv.setNum1mu();
-		}else if (action.equals("Sin")) {
+		} else if (action.equals("Sin")) {
 			cv.setMethodSin();
-		}else if (action.equals("Cos")) {
+		} else if (action.equals("Cos")) {
 			cv.setMethodCos();
-		}else if (action.equals("Tan")) {
+		} else if (action.equals("Tan")) {
 			cv.setMethodTan();
+		} else if (action.equals("About Me")) {
+			cv.showMess();
 		}
 	}
 }

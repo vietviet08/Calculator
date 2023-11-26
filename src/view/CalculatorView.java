@@ -12,7 +12,9 @@ import javax.swing.JMenu;
 import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
@@ -121,11 +123,15 @@ public class CalculatorView extends JFrame {
 		JMenu mnNewMenu_2 = new JMenu("Help");
 		menuBar.add(mnNewMenu_2);
 
+		JMenuItem mntmNewMenuItem_aboutMe = new JMenuItem("About Me");
+		mntmNewMenuItem_aboutMe.addActionListener(cl);
+		mnNewMenu_2.add(mntmNewMenuItem_aboutMe);
+
 		btnNewButton_1 = new JButton("1");
 		btnNewButton_1.setEnabled(false);
 		btnNewButton_1.setBackground(new Color(230, 230, 250));
 		btnNewButton_1.setForeground(Color.BLACK);
-		btnNewButton_1.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_1.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_1.setBounds(16, 338, 50, 50);
 		btnNewButton_1.addActionListener(cl);
 		contentPane.add(btnNewButton_1);
@@ -133,7 +139,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_bang = new JButton("=");
 		btnNewButton_bang.setEnabled(false);
 		btnNewButton_bang.setBackground(new Color(224, 255, 255));
-		btnNewButton_bang.setFont(new Font("Segoe UI", Font.BOLD, 16));
+		btnNewButton_bang.setFont(new Font("Segoe UI", Font.BOLD, 22));
 		btnNewButton_bang.setBounds(256, 338, 50, 108);
 		btnNewButton_bang.addActionListener(cl);
 		contentPane.add(btnNewButton_bang);
@@ -142,7 +148,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_4.setEnabled(false);
 		btnNewButton_4.setBackground(new Color(230, 230, 250));
 		btnNewButton_4.setForeground(Color.BLACK);
-		btnNewButton_4.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_4.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_4.setBounds(16, 277, 50, 50);
 		btnNewButton_4.addActionListener(cl);
 		contentPane.add(btnNewButton_4);
@@ -151,7 +157,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_2.setEnabled(false);
 		btnNewButton_2.setBackground(new Color(230, 230, 250));
 		btnNewButton_2.setForeground(Color.BLACK);
-		btnNewButton_2.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_2.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_2.setBounds(76, 338, 50, 50);
 		btnNewButton_2.addActionListener(cl);
 		contentPane.add(btnNewButton_2);
@@ -160,7 +166,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_3.setEnabled(false);
 		btnNewButton_3.setBackground(new Color(230, 230, 250));
 		btnNewButton_3.setForeground(Color.BLACK);
-		btnNewButton_3.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_3.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_3.setBounds(136, 338, 50, 50);
 		btnNewButton_3.addActionListener(cl);
 		contentPane.add(btnNewButton_3);
@@ -168,7 +174,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_tru = new JButton("-");
 		btnNewButton_tru.setEnabled(false);
 		btnNewButton_tru.setBackground(new Color(255, 218, 185));
-		btnNewButton_tru.setFont(new Font("Segoe UI", Font.BOLD, 16));
+		btnNewButton_tru.setFont(new Font("Segoe UI", Font.BOLD, 24));
 		btnNewButton_tru.setBounds(196, 338, 50, 50);
 		btnNewButton_tru.addActionListener(cl);
 		contentPane.add(btnNewButton_tru);
@@ -177,22 +183,23 @@ public class CalculatorView extends JFrame {
 		btnNewButton_0.setEnabled(false);
 		btnNewButton_0.setBackground(new Color(230, 230, 250));
 		btnNewButton_0.setForeground(Color.BLACK);
-		btnNewButton_0.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_0.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_0.setBounds(16, 396, 110, 50);
 		btnNewButton_0.addActionListener(cl);
 		contentPane.add(btnNewButton_0);
 
 		btnNewButton_cham = new JButton(".");
 		btnNewButton_cham.setEnabled(false);
-		btnNewButton_cham.setFont(new Font("Segoe UI", Font.BOLD, 16));
+		btnNewButton_cham.setFont(new Font("Segoe UI", Font.BOLD, 24));
 		btnNewButton_cham.setBounds(136, 396, 50, 50);
+		btnNewButton_cham.setActionCommand(",");
 		btnNewButton_cham.addActionListener(cl);
 		contentPane.add(btnNewButton_cham);
 
 		btnNewButton_cong = new JButton("+");
 		btnNewButton_cong.setEnabled(false);
 		btnNewButton_cong.setBackground(new Color(255, 218, 185));
-		btnNewButton_cong.setFont(new Font("Segoe UI", Font.BOLD, 16));
+		btnNewButton_cong.setFont(new Font("Segoe UI", Font.BOLD, 22));
 		btnNewButton_cong.setBounds(196, 396, 50, 50);
 		btnNewButton_cong.addActionListener(cl);
 		btnNewButton_cong.addActionListener(cl);
@@ -202,7 +209,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_7.setEnabled(false);
 		btnNewButton_7.setBackground(new Color(230, 230, 250));
 		btnNewButton_7.setForeground(Color.BLACK);
-		btnNewButton_7.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_7.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_7.setBounds(16, 216, 50, 50);
 		btnNewButton_7.addActionListener(cl);
 		contentPane.add(btnNewButton_7);
@@ -211,7 +218,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_8.setEnabled(false);
 		btnNewButton_8.setBackground(new Color(230, 230, 250));
 		btnNewButton_8.setForeground(Color.BLACK);
-		btnNewButton_8.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_8.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_8.setBounds(76, 216, 50, 50);
 		btnNewButton_8.addActionListener(cl);
 		contentPane.add(btnNewButton_8);
@@ -220,15 +227,16 @@ public class CalculatorView extends JFrame {
 		btnNewButton_9.setEnabled(false);
 		btnNewButton_9.setBackground(new Color(230, 230, 250));
 		btnNewButton_9.setForeground(Color.BLACK);
-		btnNewButton_9.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_9.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_9.setBounds(136, 216, 50, 50);
 		btnNewButton_9.addActionListener(cl);
 		contentPane.add(btnNewButton_9);
 
 		btnNewButton_delete = new JButton("DEL");
+		btnNewButton_delete.setHorizontalAlignment(SwingConstants.LEADING);
 		btnNewButton_delete.setEnabled(false);
 		btnNewButton_delete.setBackground(new Color(255, 99, 71));
-		btnNewButton_delete.setFont(new Font("Gadugi", Font.PLAIN, 9));
+		btnNewButton_delete.setFont(new Font("Dubai", Font.PLAIN, 9));
 		btnNewButton_delete.setBounds(196, 216, 50, 50);
 		btnNewButton_delete.addActionListener(cl);
 		contentPane.add(btnNewButton_delete);
@@ -237,7 +245,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_5.setEnabled(false);
 		btnNewButton_5.setBackground(new Color(230, 230, 250));
 		btnNewButton_5.setForeground(Color.BLACK);
-		btnNewButton_5.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_5.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_5.setBounds(76, 277, 50, 50);
 		btnNewButton_5.addActionListener(cl);
 		contentPane.add(btnNewButton_5);
@@ -246,7 +254,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_6.setEnabled(false);
 		btnNewButton_6.setBackground(new Color(230, 230, 250));
 		btnNewButton_6.setForeground(Color.BLACK);
-		btnNewButton_6.setFont(new Font("Segoe UI Black", Font.BOLD, 12));
+		btnNewButton_6.setFont(new Font("Segoe UI Black", Font.BOLD, 18));
 		btnNewButton_6.setBounds(136, 277, 50, 50);
 		btnNewButton_6.addActionListener(cl);
 		contentPane.add(btnNewButton_6);
@@ -254,15 +262,16 @@ public class CalculatorView extends JFrame {
 		btnNewButton_nhan = new JButton("*");
 		btnNewButton_nhan.setEnabled(false);
 		btnNewButton_nhan.setBackground(new Color(255, 218, 185));
-		btnNewButton_nhan.setFont(new Font("Segoe UI", Font.BOLD, 16));
+		btnNewButton_nhan.setFont(new Font("Segoe UI", Font.BOLD, 24));
 		btnNewButton_nhan.setBounds(196, 277, 50, 50);
 		btnNewButton_nhan.addActionListener(cl);
 		contentPane.add(btnNewButton_nhan);
 
 		btnNewButton_ac = new JButton("AC");
+		btnNewButton_ac.setHorizontalAlignment(SwingConstants.LEADING);
 		btnNewButton_ac.setEnabled(false);
 		btnNewButton_ac.setBackground(new Color(255, 99, 71));
-		btnNewButton_ac.setFont(new Font("Gadugi", Font.BOLD, 10));
+		btnNewButton_ac.setFont(new Font("Gadugi", Font.BOLD, 12));
 		btnNewButton_ac.setBounds(256, 216, 50, 50);
 		btnNewButton_ac.addActionListener(cl);
 		contentPane.add(btnNewButton_ac);
@@ -270,7 +279,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_chia = new JButton("/");
 		btnNewButton_chia.setEnabled(false);
 		btnNewButton_chia.setBackground(new Color(255, 218, 185));
-		btnNewButton_chia.setFont(new Font("Segoe UI", Font.BOLD, 16));
+		btnNewButton_chia.setFont(new Font("Segoe UI", Font.BOLD, 24));
 		btnNewButton_chia.setBounds(256, 277, 50, 50);
 		btnNewButton_chia.addActionListener(cl);
 		contentPane.add(btnNewButton_chia);
@@ -282,7 +291,7 @@ public class CalculatorView extends JFrame {
 		panel.setLayout(null);
 
 		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		textField_1.setBorder(null);
 		textField_1.setHorizontalAlignment(SwingConstants.TRAILING);
 		textField_1.setBounds(7, 11, 279, 20);
@@ -295,7 +304,7 @@ public class CalculatorView extends JFrame {
 		textField.setBounds(7, 31, 279, 51);
 		panel.add(textField);
 		textField.setBorder(null);
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		textField.setColumns(10);
 
 		rdbtnNewRadioButton_on = new JRadioButton("On");
@@ -320,7 +329,7 @@ public class CalculatorView extends JFrame {
 		btnNewButton_can = new JButton("√");
 		btnNewButton_can.setEnabled(false);
 		btnNewButton_can.setBackground(new Color(173, 216, 230));
-		btnNewButton_can.setFont(new Font("Segoe UI", Font.BOLD, 12));
+		btnNewButton_can.setFont(new Font("Segoe UI", Font.BOLD, 18));
 		btnNewButton_can.setBounds(16, 155, 50, 50);
 		btnNewButton_can.addActionListener(cl);
 		contentPane.add(btnNewButton_can);
@@ -328,20 +337,22 @@ public class CalculatorView extends JFrame {
 		btnNewButton_mu = new JButton("^");
 		btnNewButton_mu.setEnabled(false);
 		btnNewButton_mu.setBackground(new Color(173, 216, 230));
-		btnNewButton_mu.setFont(new Font("Segoe UI", Font.BOLD, 12));
+		btnNewButton_mu.setFont(new Font("Segoe UI", Font.BOLD, 18));
 		btnNewButton_mu.setBounds(76, 155, 50, 50);
 		btnNewButton_mu.addActionListener(cl);
 		contentPane.add(btnNewButton_mu);
 
 		btnNewButton_sin = new JButton("Sin");
+		btnNewButton_sin.setHorizontalAlignment(SwingConstants.LEADING);
 		btnNewButton_sin.setEnabled(false);
 		btnNewButton_sin.setBackground(new Color(173, 216, 230));
-		btnNewButton_sin.setFont(new Font("Gadugi", Font.PLAIN, 10));
+		btnNewButton_sin.setFont(new Font("Gadugi", Font.PLAIN, 12));
 		btnNewButton_sin.setBounds(136, 155, 50, 50);
 		btnNewButton_sin.addActionListener(cl);
 		contentPane.add(btnNewButton_sin);
 
 		btnNewButton_cos = new JButton("Cos");
+		btnNewButton_cos.setHorizontalAlignment(SwingConstants.LEADING);
 		btnNewButton_cos.setEnabled(false);
 		btnNewButton_cos.setBackground(new Color(173, 216, 230));
 		btnNewButton_cos.setFont(new Font("Gadugi", Font.PLAIN, 10));
@@ -350,9 +361,10 @@ public class CalculatorView extends JFrame {
 		contentPane.add(btnNewButton_cos);
 
 		btnNewButton_tan = new JButton("Tan");
+		btnNewButton_tan.setHorizontalAlignment(SwingConstants.LEADING);
 		btnNewButton_tan.setEnabled(false);
 		btnNewButton_tan.setBackground(new Color(173, 216, 230));
-		btnNewButton_tan.setFont(new Font("Gadugi", Font.PLAIN, 9));
+		btnNewButton_tan.setFont(new Font("Gadugi", Font.PLAIN, 10));
 		btnNewButton_tan.setBounds(256, 155, 50, 50);
 		btnNewButton_tan.addActionListener(cl);
 		contentPane.add(btnNewButton_tan);
@@ -379,16 +391,17 @@ public class CalculatorView extends JFrame {
 	}
 
 	public String resource;
+	public String re1;
 
 	public void kiemTraDauBang() {
-		if (re == "=" || re == "source") {
+		if (re == "=" || re == "source" || re == "AC") {
 			textField.setText(null);
 			re = null;
 		}
 	}
 
 	public void whatNext() {
-		if (re == "+" || re == "-" || re == "*" || re == "/") {
+		if (re == "+" || re == "-" || re == "*" || re == "/" || re == "^") {
 //			setNum2andresult();
 			double number = Double.parseDouble(textField.getText());
 			cm.setNum2(number);
@@ -413,8 +426,17 @@ public class CalculatorView extends JFrame {
 				cm.setAns(result);
 				textField_1.setText(resource + number + " / ");
 				textField.setText(result + "");
+			} else if (re == "^") {
+				double result = Math.pow(cm.getNum1(), cm.getNum2());
+				cm.setAns(result);
+				textField_1.setText(resource + number + " ^ ");
+				textField.setText(result + "");
 			}
 		}
+//		else if(re == "AC") {
+//			textField_1.setText("Ans + ");
+//			double result = cm.getAns() + cm.getNum2();
+//		}
 	}
 
 	public void setTextNum1() {
@@ -478,6 +500,12 @@ public class CalculatorView extends JFrame {
 	}
 
 	public void setNum1cong() {
+		if (re == "AC") {
+			textField_1.setText("Ans + ");
+			cm.setNum1(cm.getAns());
+			re = "+";
+			return;
+		}
 		whatNext();
 		double number = Double.parseDouble(textField.getText());
 		cm.setNum1(number);
@@ -485,10 +513,15 @@ public class CalculatorView extends JFrame {
 		resource = number + " + ";
 		textField_1.setText(resource);
 		textField.setText(null);
-
 	}
 
 	public void setNum1tru() {
+		if (re == "AC") {
+			textField_1.setText("Ans - ");
+			cm.setNum1(cm.getAns());
+			re = "-";
+			return;
+		}
 		whatNext();
 		double number = Double.parseDouble(textField.getText());
 		cm.setNum1(number);
@@ -499,6 +532,12 @@ public class CalculatorView extends JFrame {
 	}
 
 	public void setNum1nhan() {
+		if (re == "AC") {
+			textField_1.setText("Ans * ");
+			cm.setNum1(cm.getAns());
+			re = "*";
+			return;
+		}
 		whatNext();
 		double number = Double.parseDouble(textField.getText());
 		cm.setNum1(number);
@@ -509,6 +548,12 @@ public class CalculatorView extends JFrame {
 	}
 
 	public void setNum1chia() {
+		if (re == "AC") {
+			textField_1.setText("Ans / ");
+			cm.setNum1(cm.getAns());
+			re = "/";
+			return;
+		}
 		whatNext();
 		double number = Double.parseDouble(textField.getText());
 		cm.setNum1(number);
@@ -556,6 +601,12 @@ public class CalculatorView extends JFrame {
 			textField_1.setText(null);
 			textField.setText(result + "");
 		}
+//		else if (re == "resource") {
+//			double result = Math.pow(cm.getNum1(), cm.getNum2());
+//			cm.setAns(result);
+//			textField_1.setText(null);
+//			textField.setText(result + "");
+//		}
 		re = "=";
 	}
 
@@ -576,8 +627,10 @@ public class CalculatorView extends JFrame {
 
 	public void setMethodSin() {
 		if (textField.getText().length() > 0) {
+			cm.setNum2(Math.sin(Double.parseDouble(textField.getText())));
 			textField.setText(Math.sin(Double.parseDouble(textField.getText())) + "");
 			re = "source";
+			re1 = "lg";
 		}
 	}
 
@@ -593,5 +646,18 @@ public class CalculatorView extends JFrame {
 			textField.setText(Math.tan(Double.parseDouble(textField.getText())) + "");
 			re = "source";
 		}
+	}
+
+	ImageIcon icon = new ImageIcon(CalculatorView.class.getResource("logoVKU.png"));
+
+	public void showMess() {
+		JOptionPane.showInternalMessageDialog(null, new JLabel("Nguyen Quoc Viet 23CE2", icon, JLabel.LEFT),
+				"inf ab me", JOptionPane.INFORMATION_MESSAGE);
+	}
+
+	public void setTextDot() {
+//		textField.setText(".");
+		String number = textField.getText() + btnNewButton_cham.getText();
+		textField.setText(number);
 	}
 }
