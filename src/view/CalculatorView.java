@@ -1,35 +1,33 @@
 package view;
 
+import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import javax.swing.KeyStroke;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
 import java.awt.Font;
-import javax.swing.JLabel;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
 import controller.CalculatorListener;
 import model.CalculatorModel;
-
-import java.awt.Color;
-import javax.swing.JRadioButton;
-import java.awt.SystemColor;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
 
 public class CalculatorView extends JFrame {
 	public CalculatorModel cm;
@@ -104,6 +102,10 @@ public class CalculatorView extends JFrame {
 
 		CalculatorListener cl = new CalculatorListener(this);
 
+		java.net.URL urlIconNotepad = CalculatorView.class.getResource("logoVKU.png");
+		Image img = Toolkit.getDefaultToolkit().createImage(urlIconNotepad);
+		this.setIconImage(img);
+		
 		menuBar = new JMenuBar();
 //		menuBar.setBackground(Color.DARK_GRAY);
 		menuBar.setBounds(0, 0, 306, 22);
