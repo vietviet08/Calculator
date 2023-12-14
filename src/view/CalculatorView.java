@@ -26,6 +26,9 @@ import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatLightLaf;
+
 import controller.CalculatorListener;
 import model.CalculatorModel;
 
@@ -72,11 +75,12 @@ public class CalculatorView extends JFrame {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				CalculatorView frame = new CalculatorView();
+				frame.setVisible(true);
+				frame.setResizable(false);
+				FlatDarkLaf.setup();
 				try {
-					CalculatorView frame = new CalculatorView();
-					frame.setVisible(true);
-					frame.setResizable(false);
-					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+//					UIManager.setLookAndFeel(new FlatDarkLaf());
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

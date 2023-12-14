@@ -4,6 +4,11 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.UIManager;
+
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatLightLaf;
+
 import view.CalculatorView;
 
 public class CalculatorListener implements ActionListener {
@@ -82,6 +87,12 @@ public class CalculatorListener implements ActionListener {
 			cv.rdbtnNewRadioButton_dark.setForeground(Color.WHITE);
 			cv.rdbtnNewRadioButton_off.setForeground(Color.WHITE);
 			cv.rdbtnNewRadioButton_light.setForeground(Color.WHITE);
+			try {
+				
+				UIManager.setLookAndFeel(new FlatDarkLaf());
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
 		} else if (action.equals("Light")) {
 			cv.contentPane.setBackground(Color.WHITE);
 			cv.rdbtnNewRadioButton_light.setBackground(Color.WHITE);
