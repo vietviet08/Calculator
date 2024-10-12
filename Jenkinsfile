@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/vietviet08/https://github.com/vietviet08/Calculator.git'
+                git branch: 'main', url: 'https://github.com/vietviet08/Calculator.git'
             }
         }
         stage('Build') {
